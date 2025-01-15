@@ -8,24 +8,37 @@ This project scrapes the **Inspector Lookup** page of a given website.
 What It Does:
 The script navigates to the Inspector Lookup page, selects the "Boiler and Unfired Pressure Vessels" program from a dropdown menu, and retrieves inspector details displayed in a dynamically generated HTML table.
 
-How It Works:
+## How It Works:
 
-Browser Automation:
-The script uses Selenium WebDriver to automate interactions with the webpage, mimicking human actions like clicking buttons and selecting dropdown options.
+1. Browser Automation
+The script uses Selenium WebDriver to automate interactions with the webpage, mimicking human actions such as:
 
-Dynamic Table Scraping:
-Selenium locates the table rows (<tr> elements) within the HTML structure and extracts data from the cells (<td> elements) corresponding to:
+Clicking buttons.
+Selecting options from dropdown menus.
+
+2. Dynamic Table Scraping
+Selenium locates the table rows (<tr> elements) within the HTML structure and extracts data from the table cells (<td> elements). The extracted data includes:
+
+Inspector Name.
+Program Area.
+Email and Phone Number:
+These are retrieved from <span> elements nested inside a cell.
+Counties:
+
+A single cell containing a comma-separated list of counties is split into individual entries to create one row per county.
+
+3. Saves the Data into a Structured CSV File
+What It Does:
+The extracted details are saved into a CSV file named inspectors_expanded.csv. The file includes the following columns:
+
 Inspector Name
 Program Area
-Email and Phone Number (retrieved from <span> elements inside a cell)
-Counties (split into individual entries from a comma-separated list)
-
-2. Saves the Data into a Structured CSV File
-What It Does:
-The extracted details are saved into a CSV file (inspectors_expanded.csv) for easy analysis and future use.
+Email
+Phone Number
+County
 
 Outcome:
-The resulting CSV file is well-organized, with a row for every inspector-county pair. This ensures compatibility with data analysis tools like Excel, Pandas, or BI platforms.
+The resulting CSV file is clean and structured, with one row per inspector-county pair. This ensures compatibility with data analysis tools like Excel, Pandas, or BI platforms such as Tableau.
 
 ## Usage
 Run the scraper:
