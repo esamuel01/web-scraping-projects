@@ -19,11 +19,12 @@ Selecting options from dropdown menus.
 2. Dynamic Table Scraping
 Selenium locates the table rows (<tr> elements) within the HTML structure and extracts data from the table cells (<td> elements). The extracted data includes:
 
-Inspector Name.
-Program Area.
-Email and Phone Number:
+*Inspector Name.
+*Program Area.
+*Email and Phone Number:
+
 These are retrieved from <span> elements nested inside a cell.
-Counties:
+*Counties:
 
 A single cell containing a comma-separated list of counties is split into individual entries to create one row per county.
 
