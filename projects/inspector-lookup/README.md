@@ -34,11 +34,10 @@ What It Does:
 * The extracted details are saved into a CSV file named inspectors_expanded.csv.
 * The file includes the following columns:
   * Inspector Name
-*   Inspector Name
-*   Program Area
-*   Email
-*   Phone Number
-*   County
+  *   Program Area
+  *   Email
+  *   Phone Number
+  *   County
 
 Outcome:
 The resulting CSV file is clean and structured, with one row per inspector-county pair. This ensures compatibility with data analysis tools like Excel, Pandas, or BI platforms such as Tableau.
