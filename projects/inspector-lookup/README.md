@@ -33,6 +33,7 @@ A single cell containing a comma-separated list of counties is split into indivi
 What It Does:
 * The extracted details are saved into a CSV file named inspectors_expanded.csv.
 * The file includes the following columns:
+*     Inspector Name
 *   Inspector Name
 *   Program Area
 *   Email
