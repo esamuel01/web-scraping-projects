@@ -11,4 +11,5 @@ This project scrapes the **Inspector Lookup** page of a given website.
 ## Usage
 Run the scraper:
 ```bash
+cd web-scraping-projects/projects/inspector-lookup
 python scraper.py
